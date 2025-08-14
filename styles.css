@@ -1,0 +1,130 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.contact-section {
+  padding: 80px 10px;
+  background-color: #fff;
+  position: relative;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  background-color: #a86b42;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  z-index: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.contact-left {
+  flex: 0 0 45%;
+  max-width: 45%;
+  margin-right: 2%;
+}
+
+.contact-right {
+  flex: 0 0 53%;
+  max-width: 53%;
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-title span {
+  color: #a86b42;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.send-btn {
+  background-color: #a86b42;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #8b5e3c;
+}
+
+.info-box {
+  background-color: #f6e8dd;
+  color: #3a2a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-box i {
+  color: #a86b42;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left, .contact-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .info-box {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .info-box p {
+    justify-content: center;
+  }
+}
+

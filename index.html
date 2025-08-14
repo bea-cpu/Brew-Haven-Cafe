@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Brew Haven Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/main.jpg" type="img/jpg" />
+</head>
+
+<body>
+  <main>
+  <nav class="navbar">
+    <div class="logo">Brew Haven Café</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#index">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#customer">Review</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <button onclick="toggleTheme()" class="theme-toggle">🌙</button>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <section id="index">
+    <div id="hero">
+      <h1>Welcome to Brew Haven Café</h1>
+      <p>Artisan coffee and homemade pastries in a cozy environment</p>
+      <button onclick="scrollToSection('menu')">See Our Menu</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Brew Haven Café is a cozy retreat where artisan coffee, homemade pastries, and warm, rustic charm come together. 
+      Surrounded by books, plants, and inviting spaces, it's the perfect spot to relax, connect, or simply enjoy a 
+      quiet cup.</p>
+    <div class="about-gallery">
+      <img src="img/1.jpg" alt="Inside Brews Haven Café" width="40%" height="40%"/>
+      <img src="img/2.jpg" alt="Inside Brew Haven Café" width="40%" height="40%"/>
+      <img src="img/3.jpg" alt="Inside Brew Haven Café" width="40%" height="40%"/>
+    <img src="img/4.jpg" alt="Inside Brew Haven Café" width="40%" height="40%"/>
+  </div>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-filters">
+      <button onclick="filterMenu('all')">All</button>
+      <button onclick="filterMenu('coffee')">Coffee</button>
+      <button onclick="filterMenu('pastry')">Pastries</button>
+    </div>
+
+    <div class="menu-items" id="menuItems">
+      <div class="item" data-category="coffee">
+        <img src="img/Espresso.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Rich and smooth espresso shot</p>
+        <span>125 PHP</span>
+      </div>
+
+      <div class="item" data-category="coffee">
+        <img src="img/Latte.jpg" alt="Latte">
+        <h3>Latte</h3>
+        <p>Espresso with steamed milk</p>
+        <span>195 PHP</span>
+      </div>
+
+      <div class="item" data-category="coffee">
+        <img src="img/Cappucino.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Espresso with foamed milk</p>
+        <span>190 PHP</span>
+      </div>
+
+      <div class="item" data-category="pastry">
+        <img src="img/Chocolate Croissant.jpg" alt="Chocolate Croissant">
+        <h3>Chocolate Croissant</h3>
+        <p>Flaky croissant with rich chocolate filling</p>
+        <span>150 PHP</span>
+      </div>
+
+      <div class="item" data-category="pastry">
+        <img src="img/Blueberry Muffin.jpg" alt="Blueberry Muffin">
+        <h3>Blueberry Muffin</h3>
+        <p>Fresh muffin with juicy blueberries</p>
+        <span>120 PHP</span>
+      </div>
+
+      <div class="item" data-category="pastry">
+        <img src="img/Cinnamon Roll.jpg" alt="Cinnamon Roll">
+        <h3>Cinnamon Roll</h3>
+        <p>Soft roll swirled with cinnamon and sugar</p>
+        <span>165 PHP</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container" id="galleryContainer">
+      <img src="img/Latte art.jpg" alt="Latte art" onclick="openLightbox(this)" />
+      <img src="img/Cozy.jpg" alt="Cozy seating" onclick="openLightbox(this)" />
+      <img src="img/Patry Slection.jpg" alt="Pastry selection" onclick="openLightbox(this)" />
+      <img src="img/Book.jpg" alt="Pastry selection" onclick="openLightbox(this)" />
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Lightbox preview" />
+    </div>
+  </section>
+
+  <section id="customer">
+  <h2>Our Customers <span>Review</span></h2>
+  <div class="reviews-container">
+    <div class="review-card">
+      <img src="./img/l1.jpg" alt="Customer 1">
+      <h3>John</h3>
+      <div class="stars">★ ★ ★ ☆ ☆</div>
+      <p class="review-text">
+        Warm ambiance, friendly staff, and coffee that hits just right every time.
+      </p>
+    </div>
+
+    <div class="review-card">
+      <img src="./img/r.jpg" alt="Customer 2">
+      <h3>Hanna Lee</h3>
+      <div class="stars">★ ★ ★ ★ ☆</div>
+      <p class="review-text">
+        Love the cozy vibe! Great for studying or catching up with friends.
+      </p>
+    </div>
+
+    <div class="review-card">
+      <img src="./img/l2.jpg" alt="Customer 3">
+      <h3>Louie</h3>
+      <div class="stars">★ ★ ★ ★ ☆</div>
+      <p class="review-text">
+        Best coffee experience I've had in years. The pastries are out of this world!
+      </p>
+    </div>
+
+    <div class="review-card">
+      <img src="./img/q.jpg" alt="Customer 1">
+      <h3>Emily Rose</h3>
+      <div class="stars">★ ★ ★ ☆ ☆</div>
+      <p class="review-text">
+        Lovely coffee and a warm atmosphere. Always my go-to place to relax and read a book!
+      </p>
+    </div>
+
+    <div class="review-card">
+      <img src="./img/r.jpg" alt="Customer 2">
+      <h3>Jane Smith</h3>
+      <div class="stars">★ ★ ★ ★ ☆</div>
+      <p class="review-text">
+        Absolutely the best coffee shop in town. Great service and amazing pastries!
+      </p>
+    </div>
+
+    <div class="review-card">
+      <img src="./img/l3.jpg" alt="Customer 3">
+      <h3>James</h3>
+      <div class="stars">★ ★ ★ ★ ☆</div>
+      <p class="review-text">
+        Chill vibe, friendly staff, and a perfect place for work or study sessions.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-left">
+        <h2 class="contact-title">Contact <span>Us</span></h2>
+        <p class="contact-subtitle">We'd love to hear from you!</p>
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Phone" required />
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-right info-box">
+        <h3>Info</h3>
+        <p><i class="fas fa-envelope"></i> Brew Haven.cafe@gmail.com</p>
+        <p><i class="fas fa-phone-alt"></i> +63-966-7306-048</p>
+        <p><i class="fas fa-map-marker-alt"></i> Manila, Hotel Avenue</p>
+        <p><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 6:00 PM</p>
+        <p><i class="fas fa-clock"></i> Saturday: 9:00 AM - 4:00 PM</p>
+        <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+        <p><i class="fas fa-comment-dots"></i> Have a craving, question, or comment? We’re here for it all! Whether 
+          you’re curious about our brews, planning a cozy gathering, or just want to share your coffee story, drop us a 
+          message. The Brew Haven team is always happy to connect with fellow coffee lovers.</p>
+      </div>
+      
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[placeholder="Name"]').value.trim();
+    const email = document.querySelector('input[placeholder="Email"]').value.trim();
+    const phone = document.querySelector('input[placeholder="Phone"]').value.trim();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^(09|\+639)\d{9}$/;
+
+    if (!name || !email || !phone) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (!phonePattern.test(phone)) {
+      alert("Please enter a valid Philippine phone number.");
+      return;
+    }
+
+    alert("Message sent successfully!");
+    this.reset();
+  });
+</script>
+
+      
+    </div>
+  </section>  
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">&copy; 2024 Coffee Shop</div>
+    <div class="footer-center">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <div class="footer-right">
+      <a href="#">Privacy policy</a>
+    </div>
+  </div>
+</footer>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
